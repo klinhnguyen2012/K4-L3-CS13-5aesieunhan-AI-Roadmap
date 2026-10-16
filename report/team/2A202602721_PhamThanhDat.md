@@ -30,3 +30,34 @@
 - **Kiểm tra chéo trang `1_Danh sách việc`**:
   - Toàn bộ **7/7 việc** (cột O dòng 5 đến 11) đều đạt trạng thái `"Có"`.
   - Tất cả 7 việc đều có đầy đủ giả thuyết nghiệp vụ rõ ràng (cột D) cùng chỉ số thành công và ngưỡng định lượng có con số cụ thể (cột E).
+
+### CP2 · Thẩm định điểm ưu tiên và quyết định lựa chọn
+- **Tính toán lại toàn bộ điểm ưu tiên theo công thức M**:
+  - Công thức tính điểm ưu tiên chuẩn hóa:
+    $$\text{Điểm} = \text{RICE} \times (0{,}5 + 0{,}5 \times \text{sẵn sàng TB}) \times (1 - 0{,}5 \times \text{rủi ro bị nuốt})$$
+    Trong đó:
+    - $\text{RICE} = \frac{\text{Độ phủ (F)} \times \text{Tác động (G)} \times \text{Mức tự tin (H)}}{\text{Công sức (I)}}$
+    - $\text{Sẵn sàng TB} = \frac{\text{Sẵn sàng dữ liệu (J)} + \text{Sẵn sàng đánh giá (K)}}{2}$
+    - $\text{Rủi ro bị nuốt} = \text{Cột L}$
+  - Kết quả tính toán lại độc lập cho từng việc:
+    - **Việc 3** (Chuyển bài cho giáo viên đúng lúc): $\text{RICE} = 10{,}0$, sẵn sàng TB = 0,70, rủi ro = 0,1 $\rightarrow$ **Điểm = 8,07 (Hạng 1)**.
+    - **Việc 1** (Chấm điểm 4 tiêu chí cho bài viết thường): $\text{RICE} = 6{,}67$, sẵn sàng TB = 0,80, rủi ro = 0,3 $\rightarrow$ **Điểm = 5,10 (Hạng 2)**.
+    - **Việc 7** (Báo cáo độ lệch máy–giáo viên cho đối tác): $\text{RICE} = 6{,}00$, sẵn sàng TB = 0,70, rủi ro = 0,1 $\rightarrow$ **Điểm = 4,84 (Hạng 3)**.
+    - **Việc 4** (Sửa ngữ pháp từng câu): $\text{RICE} = 10{,}0$, sẵn sàng TB = 0,90, rủi ro = 1,0 $\rightarrow$ **Điểm = 4,75 (Hạng 4)**.
+    - **Việc 2** (Nhận xét có trích câu và gợi ý sửa): $\text{RICE} = 2{,}50$, sẵn sàng TB = 0,35, rủi ro = 0,5 $\rightarrow$ **Điểm = 1,27 (Hạng 5)**.
+    - **Việc 6** (Tạo đề bài viết theo trình độ): $\text{RICE} = 2{,}40$, sẵn sàng TB = 0,65, rủi ro = 1,0 $\rightarrow$ **Điểm = 0,99 (Hạng 6)**.
+    - **Việc 5** (Báo cáo tiến bộ cho phụ huynh): $\text{RICE} = 1{,}125$, sẵn sàng TB = 0,20, rủi ro = 0,4 $\rightarrow$ **Điểm = 0,54 (Hạng 7)**.
+- **Khớp thứ tự trong Bảng lộ trình**:
+  - Thứ tự ưu tiên qua tính toán độc lập ($3 \rightarrow 1 \rightarrow 7 \rightarrow 4$) khớp hoàn toàn với thứ tự việc triển khai ở tầng Bây giờ trong `3_Bảng lộ trình!B5`: Việc 3 (xếp 1) $\rightarrow$ Việc 1 $\rightarrow$ Việc 7 $\rightarrow$ Việc 4.
+- **Thẩm định quyết định (cột P) và lý do lựa chọn (cột Q)**:
+  - **Tự làm (Việc 3, 1, 7)**:
+    - *Việc 3 (Tự làm, hạng 1)*: Là điều kiện tiên quyết để giải quyết nút thắt lớn nhất trong hồ sơ (cổng phát hành đang báo 'Xem lại' vì tầng Khó tụt 1 tầng). Tự xây luật chuyển bài và can thiệp sửa tầng Khó để chặn lỗi nghiêm trọng.
+    - *Việc 1 (Tự làm, hạng 2)*: Là năng lực cốt lõi mang lại giá trị kinh tế trực tiếp cho trung tâm, giúp giáo viên tiết kiệm 60% thời gian chấm bài thường.
+    - *Việc 7 (Tự làm, hạng 3)*: Việc nhóm đề xuất thêm dựa trên nhận diện rủi ro sống còn từ hồ sơ: 55% doanh thu đến từ 25% trung tâm lớn nhất, và trung tâm đối tác lớn nhất đang đòi bằng chứng máy lệch giáo viên bao nhiêu. Việc 7 tận dụng ngay mẫu chấm đôi 2% có sẵn nên chi phí phát triển thấp, hiệu quả giữ chân khách hàng then chốt rất cao.
+  - **Mua (Việc 4)**:
+    - *Lưu ý quan trọng*: Việc 4 đạt điểm khá cao (4,75, xếp hạng 4) do công sức thấp (1) và độ sẵn sàng cao (0,90), nhưng nhóm quyết định **Mua** thay vì Tự làm vì **rủi ro bị nuốt bằng 1,0**. Hồ sơ ghi công cụ sửa ngữ pháp miễn phí đã làm rất tốt việc sửa từng câu; việc tự phát triển sẽ không tạo ra bất kỳ lợi thế cạnh tranh độc quyền nào mà lại lãng phí giờ chuyên gia và kỹ sư. Tích hợp công cụ sẵn có giúp bổ sung tính năng với chi phí gọi thêm 0 đồng.
+  - **Chờ (Việc 2, 5)**:
+    - *Việc 2 (Chờ, hạng 5)*: Chưa có bộ dữ liệu chuẩn hóa để đo lường việc học sinh sửa bài sau nhận xét; rủi ro bị nuốt ở mức 0,5 do các mô hình miễn phí viết nhận xét khá tốt. Quyết định chờ và xem xét lại tại mốc Ngày 90.
+    - *Việc 5 (Chờ, hạng 7)*: Điểm số thấp nhất (0,54), dữ liệu điểm học sinh mới bắt đầu thu thập nên cần ít nhất 3 tháng mới có thể tạo báo cáo tiến bộ có ý nghĩa; chưa có cơ chế đo lường tỷ lệ phụ huynh gia hạn khóa học. Quyết định chờ và đưa vào xem xét tại mốc Ngày 90 (chuyển sang tầng Sau này).
+  - **Không làm (Việc 6)**:
+    - *Việc 6 (Không làm, hạng 6)*: Điểm thấp (0,99), rủi ro bị nuốt tối đa 1,0 vì các mô hình AI tạo sinh miễn phí đã làm tốt việc tạo đề bài viết. Đây không phải tính năng khiến các trung tâm sẵn sàng chi trả tiền cho ChấmNhanh. Quyết định dứt khoát không đưa vào lộ trình sản phẩm.
