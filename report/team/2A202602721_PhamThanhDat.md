@@ -88,3 +88,28 @@
   - *Thực hiện cập nhật trực tiếp vào file Excel*:
     - Ô `2_Mức tự động!F7`: Cập nhật thành: *"Đã có mẫu chấm đôi đủ 100 bài thật: giáo viên duyệt của công ty chấm đôi (3 phút/bài, đã tính trong chi phí), chuyên gia chỉ rà bài lệch và xác nhận cổng; 2% × 1.500 bài/tuần ≈ 30 bài/tuần → khoảng 4 tuần; báo cáo độ lệch gửi được cho đối tác; nhật ký bài chuyển giáo viên"*.
     - Ô `3_Bảng lộ trình!C10`: Cập nhật cụm từ `(khoảng 5 tuần)` thành: `(giáo viên duyệt của công ty chấm đôi ~30 bài/tuần, khoảng 4 tuần; chuyên gia chỉ xác nhận)`, giữ nguyên toàn bộ nội dung còn lại.
+
+### CP4 · Kiểm tra lộ trình sản phẩm, điều kiện dừng và lịch rà soát
+- **Kiểm tra tầng "Bây giờ" trên `3_Bảng lộ trình`**:
+  - Toàn bộ các ô từ **B5 đến B12 đạt đủ 8/8 dòng** theo đúng chuẩn cấu trúc:
+    1. *B5 (Việc chính)*: Liệt kê đúng 4 việc ưu tiên theo kết quả CP2 (Việc 3 xếp 1, Việc 1, Việc 7, Việc 4).
+    2. *B6 (Giả thuyết)*: Giả thuyết rõ ràng về việc chuyển bài khó giúp máy chấm bài thường và giáo viên giảm 60% thời gian chấm.
+    3. *B7 (Chỉ số & ngưỡng)*: Đầy đủ 5 chỉ số có ngưỡng định lượng (tầng tụt về 0, 0 bài lệch >1 điểm, $\ge 70\%$ bài lệch $\le 0{,}5$ điểm, giảm $\ge 60\%$ giờ chấm, tỷ lệ đạt $\ge 80\%$).
+    4. *B8 (Mức tự động)*: Xác định Mức 1 (Hỗ trợ có duyệt, duyệt 15%).
+    5. *B9 (Cổng đánh giá)*: Cổng lên Mức 1 dựa trên chạy lại bộ đề 40 bài do cô Lan xác nhận.
+    6. *B10 (Điều kiện cần)*: Nêu chi tiết giờ chuyên gia (4 giờ/tuần), thời gian chạy lại 40 bài (14,2 giờ $\approx 3{,}5$ tuần), nhãn bài vùng 5,0–6,5 và tuân thủ Luật AI 134/2025/QH15.
+    7. *B11 (Căn cứ kinh tế)*: Dẫn số liệu doanh thu 5.210 đ/bài, chi phí 1.919 đ/bài, biên gộp 63,2%, ngưỡng duyệt tối đa 17,75%.
+    8. *B12 (Điều kiện dừng/đổi hướng)*: Đầy đủ số liệu và tuân thủ chặt chẽ cấu trúc khung **NẾU…THÌ**:
+       - *"NẾU sau khi chạy lại bộ đề 40 bài (tuần 6) số tầng tụt vẫn ≥1, hoặc mẫu chấm đôi ngày 60 có ≥1 bài lệch >1 điểm, THÌ lùi về Mức 0, không mở thêm trung tâm."*
+       - *"NẾU doanh thu bình quân sau chia <3,95 triệu/trung tâm 2 tháng liên tiếp trên ≥15 trung tâm THÌ dừng mở rộng."*
+- **Thẩm định khung rà soát tại `4_Rà soát`**:
+  - *3 mốc thời gian cố định*:
+    - **Ngày 30**: Cô Lan (tổ trưởng) cùng kỹ sư rà soát số bài lệch >1 điểm trong mẫu chấm đôi 2%, tiến độ sửa tầng Khó, tỷ lệ chuyển giáo viên. Quyết định: đi tiếp, sửa hoặc lùi về Mức 0.
+    - **Ngày 60**: Cô Lan và trưởng sản phẩm đánh giá kết quả chạy lại bộ đề 40 bài (số tầng tụt, kappa, tỷ lệ đạt quy về thực tế, số giờ giáo viên tiết kiệm thực tế). Quyết định: mở Mức 2 khi qua cổng.
+    - **Ngày 90**: Ban lãnh đạo đánh giá doanh thu bình quân/trung tâm (2 tháng liên tiếp trên $\ge 15$ trung tâm) và độ lệch máy–giáo viên; chưa vội dùng chỉ số giá trị vòng đời (LTV) vì mới hoạt động 3 tháng.
+  - *3 sự kiện kích hoạt ngoài lịch*:
+    - Có mô hình mới hoặc giá API AI giảm mạnh (rà soát chi phí đơn vị và tỷ lệ đạt trên bộ đề 40 bài).
+    - Nền tảng hoặc đối thủ cạnh tranh ra tính năng tương tự (so sánh chất lượng trên 40 bài và số trung tâm yêu cầu).
+    - Quy định pháp lý thay đổi (Luật AI 134/2025/QH15 và các văn bản hướng dẫn thi hành).
+- **Kiểm tra bảng tự đánh giá tại `6_Tự kiểm tra`**:
+  - Cả **8/8 tiêu chí kiểm tra tự động đều đạt trạng thái "Đạt"** (B5 $\ge 5$; B6 = 0; B7 $\ge 2$; B8 = 8; B9 = "Có"; B10 = "Có"; B11 = 5; B12 $\ge 1$). Toàn bộ workbook đạt độ nhất quán và hoàn thiện cao nhất.

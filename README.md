@@ -1,5 +1,15 @@
 # CS13 — Lộ trình sản phẩm AI
 
+## Bài làm của nhóm 5aesieunhan
+
+- **Số nhóm**: Nhóm 5 (5aesieunhan)
+- **Đề tài**: Đề 2 · ChấmNhanh — chấm bài viết tiếng Anh
+- **Danh sách file nộp bài**:
+  - File Excel lộ trình sản phẩm: [`5aesieunhan_CS13.xlsx`](5aesieunhan_CS13.xlsx)
+  - File slide thuyết trình lãnh đạo (1 slide): [`5aesieunhan_CS13_Slide.pptx`](5aesieunhan_CS13_Slide.pptx)
+  - Thông tin phân công và bằng chứng nhóm: [`team/TEAM.md`](team/TEAM.md)
+  - Báo cáo QA & tích hợp cá nhân: [`report/team/2A202602721_PhamThanhDat.md`](report/team/2A202602721_PhamThanhDat.md)
+
 **AI in Action · Track 1 · Khóa 4 · Level 3 dùng chung · Chiều 16/10/2026**
 
 Trong bài này, nhóm bạn lập lộ trình 12 tháng cho một sản phẩm AI: làm gì trước, dựa vào bằng chứng nào, khi nào tăng mức tự động và khi nào dừng. Sản phẩm cuối là **một file Excel của nhóm** và **một slide cho lãnh đạo**, lưu trong repo GitHub của nhóm. Mỗi thành viên nộp cùng link repo trên VLearn. Bạn không cần viết code, cài Python hay có API key.
@@ -40,10 +50,11 @@ Mỗi người đọc hồ sơ của đúng đề và làm độc lập phần �
 
 | Thành viên | Mã số sinh viên | Phần phụ trách | Phạm vi làm độc lập |
 |---|---|---|---|
-| Ngô Lê Thuỷ Tiên |  | Danh sách việc 1–3 · CP1 + CP2 | Với 3 việc đầu trong danh sách đề: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
-| Định Thị Minh Tâm |  | Danh sách việc 4–6 · CP1 + CP2 | Với 3 việc còn lại trong danh sách đề: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
+| Ngô Lê Thuỷ Tiên | 2A202602614 | Danh sách việc 1–3, 7 · CP1 + CP2 | Với 3 việc đầu trong danh sách đề và việc 7: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
+| Định Thị Minh Tâm | 2A202602433 | Danh sách việc 4–6 · CP1 + CP2 | Với 3 việc còn lại trong danh sách đề: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
 | Nguyễn Khánh Linh | 2A202602409 | Mức tự động · CP3 | Điền vai trò AI/người, điều kiện và cổng đánh giá ở trang 2; phân tích chi phí, biên lợi nhuận và người duyệt. Có thể đề xuất các mức cho những việc dự kiến ưu tiên; đánh dấu phần cần khớp lại sau khi nhóm chốt lựa chọn. |
-| Bùi Thị Ngọc Trân |  | Lộ trình và slide · CP4 + CP5 | Dựa trên hồ sơ, soạn nháp tầng Bây giờ/Tiếp theo/Sau này, lịch rà soát và 5 ý cho slide. Đánh dấu chỗ phụ thuộc vào việc được chọn, cổng và số kinh tế để cập nhật khi tích hợp. |
+| Bùi Thị Ngọc Trân | 2A202602529 | Lộ trình và slide · CP4 + CP5 | Dựa trên hồ sơ, soạn nháp tầng Bây giờ/Tiếp theo/Sau này, lịch rà soát và 5 ý cho slide. Đánh dấu chỗ phụ thuộc vào việc được chọn, cổng và số kinh tế để cập nhật khi tích hợp. |
+| Phạm Thành Đạt | 2A202602721 | QA & tích hợp · CP1 Nhiệm vụ 0 + kiểm tra chéo CP1–CP5 | Điền 0_Đầu vào; tính lại điểm, chi phí, biên; đối chiếu số liệu trang 1–5 với hồ sơ; kiểm tra slide ≤60 chữ; điền TEAM.md và README nhóm. |
 
 ### Ghép kết quả
 
