@@ -61,3 +61,30 @@
     - *Việc 5 (Chờ, hạng 7)*: Điểm số thấp nhất (0,54), dữ liệu điểm học sinh mới bắt đầu thu thập nên cần ít nhất 3 tháng mới có thể tạo báo cáo tiến bộ có ý nghĩa; chưa có cơ chế đo lường tỷ lệ phụ huynh gia hạn khóa học. Quyết định chờ và đưa vào xem xét tại mốc Ngày 90 (chuyển sang tầng Sau này).
   - **Không làm (Việc 6)**:
     - *Việc 6 (Không làm, hạng 6)*: Điểm thấp (0,99), rủi ro bị nuốt tối đa 1,0 vì các mô hình AI tạo sinh miễn phí đã làm tốt việc tạo đề bài viết. Đây không phải tính năng khiến các trung tâm sẵn sàng chi trả tiền cho ChấmNhanh. Quyết định dứt khoát không đưa vào lộ trình sản phẩm.
+
+### CP3 · Thẩm định mức tự động, bài toán kinh tế và điều chỉnh mâu thuẫn chấm đôi
+- **Xác minh độc lập bài toán kinh tế theo các mức tự động**:
+  - *Doanh thu bình quân mỗi bài*: Khách hàng (trung tâm) trả trung bình $5{,}21$ triệu VNĐ/tháng (sau khi đã chia 20% cho đối tác), thực hiện trung bình $1.000$ bài/tháng $\rightarrow$ Doanh thu đơn vị = **5.210 đ/bài**.
+  - *Chi phí đơn vị theo các mức*: Chi phí nền tảng cố định trên mỗi bài gồm gọi API AI ($769$ đ) + Hạ tầng/đánh giá/khác ($250$ đ) = **1.019 đ/bài**. Giáo viên duyệt bài hưởng mức thù lao $120.000$ đ/giờ, thời gian duyệt trung bình $3$ phút/bài $\rightarrow$ Chi phí duyệt nếu duyệt $100\%$ bài là $\frac{3 \times 120.000}{60} = \mathbf{6.000\text{ đ/bài}}$.
+    - **Mức 0 (Duyệt 100%)**: $769 + 250 + 6.000 = \mathbf{7.019\text{ đ/bài}}$. Doanh thu thu về $5.210$ đ/bài $\rightarrow$ Biên lợi nhuận gộp âm ($-34{,}7\%$, lỗ $1.809$ đ/bài). Điều này chứng minh việc duy trì Mức 0 lâu dài là bất khả thi về mặt tài chính.
+    - **Mức 1 (Hỗ trợ có duyệt, duyệt 15%)**: $769 + 250 + 0{,}15 \times 6.000 = 1.019 + 900 = \mathbf{1.919\text{ đ/bài}} \rightarrow$ Biên lợi nhuận gộp đạt **63,2%** ($\ge 60\%$, đạt mục tiêu tài chính).
+    - **Mức 2 (Tự động một phần, duyệt 10%)**: $769 + 250 + 0{,}10 \times 6.000 = 1.019 + 600 = \mathbf{1.619\text{ đ/bài}} \rightarrow$ Biên lợi nhuận gộp đạt **68,9%**.
+    - **Mức 3 (Tự động có giám sát, duyệt 5%)**: $769 + 250 + 0{,}05 \times 6.000 = 1.019 + 300 = \mathbf{1.319\text{ đ/bài}} \rightarrow$ Biên lợi nhuận gộp đạt **74,7%**.
+  - *Tỷ lệ duyệt tối đa để đảm bảo biên lợi nhuận $\ge 60\%$*:
+    $$\frac{5.210 - (1.019 + p \times 6.000)}{5.210} \ge 0{,}60 \iff 1.019 + p \times 6.000 \le 2.084 \iff p \le \frac{1.065}{6.000} \approx \mathbf{17{,}75\%}$$
+    Nếu tỷ lệ bài chuyển sang giáo viên vượt quá $17{,}75\%$, biên lợi nhuận của Mức 1 sẽ rơi xuống dưới ngưỡng an toàn $60\%$.
+- **Thẩm định 3 cổng đánh giá (Mức 1 $\rightarrow$ Mức 3)**:
+  - Cả 3 cổng đánh giá đều xác định rõ 4 thành tố: **chỉ số đo lường**, **ngưỡng định lượng**, **cỡ mẫu tối thiểu** và **chủ thể chịu trách nhiệm xác nhận**.
+  - *Cổng Mức 2 và Mức 3 áp dụng chuẩn xác quy tắc $3/n$*:
+    - Với cỡ mẫu $n = 100$ bài thật, nếu quan sát thấy $0$ lỗi nghiêm trọng (lệch $>1$ điểm), cận trên khoảng tin cậy 95% của tỷ lệ lỗi nghiêm trọng trong quần thể được giới hạn ở mức $\approx 3/100 = \mathbf{3\%}$.
+    - Với cỡ mẫu $n = 200$ bài thật (2 đợt liên tiếp ở Mức 3), tỷ lệ lỗi nghiêm trọng được bảo đảm dưới $\approx 3/200 = \mathbf{1{,}5\%}$.
+  - *Ngưỡng $\ge 70\%$ bài lệch $\le 0{,}5$ điểm*: Ngưỡng này được đối chiếu chính xác với hồ sơ, trong đó hai giáo viên giỏi chấm độc lập chỉ khớp nhau khoảng $70\%$ trong phạm vi $0{,}5$ điểm. Cổng không đặt cao hơn mức này để tránh đặt kỳ vọng phi lý đối với mô hình AI khi bản thân con người cũng có độ phân kỳ tự nhiên.
+- **Phát hiện và xử lý mâu thuẫn then chốt về tiến độ chấm đôi và quỹ giờ chuyên gia**:
+  - *Mâu thuẫn phát hiện*: Bản thảo ban đầu ghi nhận chuyên gia (cô Lan và thầy Khoa) sẽ thực hiện chấm đôi 100 bài trong 5 tuần (khoảng 20 bài/tuần). Tuy nhiên, hồ sơ tình huống chỉ rõ hai chuyên gia chỉ có **tổng cộng 4 giờ/tuần** (mỗi người 2 giờ/tuần). Với tốc độ chấm đôi cẩn thận, 2 giờ chỉ chấm được khoảng 11 bài. Đặc biệt, từ tuần 3 đến tuần 6, toàn bộ thời gian của hai chuyên gia phải dành trọn cho việc đánh giá lại bộ đề 40 bài chuẩn hóa ($14{,}2$ giờ $\approx 3{,}5$ tuần làm việc) để sửa tầng Khó. Do đó, việc yêu cầu chuyên gia vừa chạy lại bộ đề 40 bài vừa chấm đôi 100 bài trong 5 tuần là hoàn toàn phi thực tế và gây quá tải nguồn lực.
+  - *Giải pháp điều chỉnh và chuẩn hóa*:
+    - Nhóm đã thống nhất chuyển công tác chấm đôi sang cho **giáo viên duyệt của công ty** đảm nhiệm (chi phí duyệt đã nằm trong chi phí biến đổi 3 phút/bài = $6.000$ đ/bài).
+    - Với lưu lượng hiện tại khoảng $1.500$ bài/tuần, tỷ lệ mẫu $2\%$ tương ứng với khoảng $\approx 30$ bài/tuần. Như vậy, chỉ cần khoảng **4 tuần** là tích lũy đủ 100 bài chấm đôi từ thực tế.
+    - Chuyên gia (cô Lan) chỉ đóng vai trò rà soát các ca có phân kỳ/lệch điểm và ký xác nhận cổng đánh giá, hoàn toàn tương thích với quỹ thời gian 4 giờ/tuần.
+  - *Thực hiện cập nhật trực tiếp vào file Excel*:
+    - Ô `2_Mức tự động!F7`: Cập nhật thành: *"Đã có mẫu chấm đôi đủ 100 bài thật: giáo viên duyệt của công ty chấm đôi (3 phút/bài, đã tính trong chi phí), chuyên gia chỉ rà bài lệch và xác nhận cổng; 2% × 1.500 bài/tuần ≈ 30 bài/tuần → khoảng 4 tuần; báo cáo độ lệch gửi được cho đối tác; nhật ký bài chuyển giáo viên"*.
+    - Ô `3_Bảng lộ trình!C10`: Cập nhật cụm từ `(khoảng 5 tuần)` thành: `(giáo viên duyệt của công ty chấm đôi ~30 bài/tuần, khoảng 4 tuần; chuyên gia chỉ xác nhận)`, giữ nguyên toàn bộ nội dung còn lại.
