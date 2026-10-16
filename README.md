@@ -34,6 +34,25 @@ Nếu chưa biết số nhóm, hỏi coach trước khi chọn file. Nhóm chỉ
 
 Tất cả mốc giờ dùng giờ Việt Nam. Phần lý thuyết diễn ra 14:00–17:00; lịch trên chỉ dành cho thực hành. Bản chuẩn không có phần thuyết trình trên lớp.
 
+## Phân công song song
+
+Mỗi người đọc hồ sơ của đúng đề và làm độc lập phần được giao. Dùng cùng đơn vị “1 việc”, cùng thang điểm trong [CHECKPOINTS.md](CHECKPOINTS.md), và chỉ sửa các ô vàng trong Excel. Không chờ một người hoàn thành toàn bộ checkpoint rồi mới bắt đầu phần khác.
+
+| Thành viên | Mã số sinh viên | Phần phụ trách | Phạm vi làm độc lập |
+|---|---|---|---|
+| Ngô Lê Thuỷ Tiên |  | Danh sách việc 1–3 · CP1 + CP2 | Với 3 việc đầu trong danh sách đề: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
+| Định Thị Minh Tâm |  | Danh sách việc 4–6 · CP1 + CP2 | Với 3 việc còn lại trong danh sách đề: điền giả thuyết, chỉ số/ngưỡng và các điểm F–L; đề xuất quyết định P cùng lý do Q. |
+| Nguyễn Khánh Linh | 2A202602409 | Mức tự động · CP3 | Điền vai trò AI/người, điều kiện và cổng đánh giá ở trang 2; phân tích chi phí, biên lợi nhuận và người duyệt. Có thể đề xuất các mức cho những việc dự kiến ưu tiên; đánh dấu phần cần khớp lại sau khi nhóm chốt lựa chọn. |
+| Bùi Thị Ngọc Trân |  | Lộ trình và slide · CP4 + CP5 | Dựa trên hồ sơ, soạn nháp tầng Bây giờ/Tiếp theo/Sau này, lịch rà soát và 5 ý cho slide. Đánh dấu chỗ phụ thuộc vào việc được chọn, cổng và số kinh tế để cập nhật khi tích hợp. |
+
+### Ghép kết quả
+
+1. Tiên và Tâm nhập kết quả vào các dòng riêng trên `1_Danh sách việc`; không sửa dòng của nhau. Hai bạn cùng kiểm tra đủ ít nhất 5 việc có giả thuyết, chỉ số, ngưỡng và quyết định.
+2. Linh đối chiếu lựa chọn ưu tiên với các mức tự động và cổng. Nhóm chốt ít nhất 2 cổng có chỉ số, ngưỡng, cỡ mẫu và người xác nhận; xử lý đúng trạng thái phát hành của đề.
+3. Trân thay phần đánh dấu trong lộ trình/slide bằng các quyết định, cổng và số kinh tế đã chốt. Nhóm cùng rà sự nhất quán giữa trang 1–5, điều kiện dừng và nội dung slide.
+
+Các phần có thể được soạn đồng thời; bước ghép cuối cần chờ để CP3 khớp với việc được chọn và CP4/CP5 khớp với toàn bộ quyết định. Rubric chấm theo tiêu chí, không chia đều điểm cho từng người. Mỗi thành viên cùng đọc hồ sơ và xác nhận nội dung cuối trước khi nộp.
+
 ## Đọc thêm ở đâu?
 
 - [CHECKPOINTS.md](CHECKPOINTS.md): từng bước điền, cách hiểu và tự kiểm tra.
