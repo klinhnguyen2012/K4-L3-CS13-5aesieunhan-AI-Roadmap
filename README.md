@@ -9,6 +9,7 @@
   - File slide thuyết trình lãnh đạo (1 slide): [`5aesieunhan_CS13_Slide.pptx`](5aesieunhan_CS13_Slide.pptx)
   - Thông tin phân công và bằng chứng nhóm: [`team/TEAM.md`](team/TEAM.md)
   - Báo cáo cá nhân các thành viên:
+    - Nguyễn Khánh Linh (Mức tự động · CP3): [`report/team/2A202602409_NguyenKhanhLinh.md`](report/team/2A202602409_NguyenKhanhLinh.md)
     - Bùi Thị Ngọc Trân (Lộ trình & slide · CP4 + CP5): [`report/team/2A202602529_BuiThiNgocTran.md`](report/team/2A202602529_BuiThiNgocTran.md)
     - Ngô Lê Thuỷ Tiên (Danh sách việc 1–3, 7 · CP1 + CP2): [`report/team/2A202602614_NgoLeThuyTien.md`](report/team/2A202602614_NgoLeThuyTien.md)
     - Đinh Thị Minh Tâm (Danh sách việc 4–6 · CP1 + CP2): [`report/team/2A202602433_DinhThiMinhTam.md`](report/team/2A202602433_DinhThiMinhTam.md)
