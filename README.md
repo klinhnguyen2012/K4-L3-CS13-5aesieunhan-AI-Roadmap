@@ -8,7 +8,11 @@
   - File Excel lộ trình sản phẩm: [`5aesieunhan_CS13.xlsx`](5aesieunhan_CS13.xlsx)
   - File slide thuyết trình lãnh đạo (1 slide): [`5aesieunhan_CS13_Slide.pptx`](5aesieunhan_CS13_Slide.pptx)
   - Thông tin phân công và bằng chứng nhóm: [`team/TEAM.md`](team/TEAM.md)
-  - Báo cáo QA & tích hợp cá nhân: [`report/team/2A202602721_PhamThanhDat.md`](report/team/2A202602721_PhamThanhDat.md)
+  - Báo cáo cá nhân các thành viên:
+    - Bùi Thị Ngọc Trân (Lộ trình & slide · CP4 + CP5): [`report/team/2A202602529_BuiThiNgocTran.md`](report/team/2A202602529_BuiThiNgocTran.md)
+    - Ngô Lê Thuỷ Tiên (Danh sách việc 1–3, 7 · CP1 + CP2): [`report/team/2A202602614_NgoLeThuyTien.md`](report/team/2A202602614_NgoLeThuyTien.md)
+    - Đinh Thị Minh Tâm (Danh sách việc 4–6 · CP1 + CP2): [`report/team/2A202602433_DinhThiMinhTam.md`](report/team/2A202602433_DinhThiMinhTam.md)
+    - Phạm Thành Đạt (QA & tích hợp · CP1 Nhiệm vụ 0 + kiểm tra chéo CP1–CP5): [`report/team/2A202602721_PhamThanhDat.md`](report/team/2A202602721_PhamThanhDat.md)
 
 **AI in Action · Track 1 · Khóa 4 · Level 3 dùng chung · Chiều 16/10/2026**
 
